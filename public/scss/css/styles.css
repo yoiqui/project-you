@@ -1,0 +1,528 @@
+.nav-pills .nav-link {
+    color: #000000; /* สีข้อความเริ่มต้น */
+    background: none; /* สีพื้นหลังเริ่มต้น */
+    border: none; /* ไม่มีเส้นขอบ */
+    border-radius: 5px; /* การปัดมุม */
+    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background-color 0.3s, color 0.3s; /* อนุญาตให้เกิดการเปลี่ยนแปลงสีอย่างนุ่มนวล */
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus {
+    background-color: #ffdd007a; /* สีพื้นหลังเมื่อโฮเวอร์หรือโฟกัส */
+    color: #ffffff; /* สีข้อความเมื่อโฮเวอร์หรือโฟกัส */
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #495057; /* สีข้อความเมื่อเป็น active หรือถูกเลือก */
+    background-color: #ffdd007a; /* สีพื้นหลังเมื่อเป็น active หรือถูกเลือก */
+}
+.sidebar .navbar .dropdown-toggle::after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    content: "\f107";
+    font-family:  "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: .5s;
+}
+
+.sidebar .navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.sidebar .navbar .dropdown-item {
+    padding-left: 25px;
+    border-radius: 0 20px 20px 0;
+}
+
+.navbar .dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "\f107";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+body {
+    font-family: 'Noto Sans Thai', sans-serif; /* เปลี่ยนฟ้อนต์สำหรับ body */
+}
+
+/* เพิ่มรูปแบบการเขียนเพิ่มเติมตามความต้องการ */
+h1, h2, h3, p {
+    font-family: 'Noto Sans Thai', sans-serif; /* เปลี่ยนฟ้อนต์สำหรับหัวข้อและย่อหน้า */
+    color: black;
+}
+
+/* เพิ่มรูปแบบการเขียนเพิ่มเติมตามความต้องการ */
+.custom-class {
+    font-family: 'Noto Sans Thai', sans-serif; /* เปลี่ยนฟ้อนต์สำหรับคลาสที่กำหนดเอง */
+}
+
+/* Style for the switch */
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #43766C;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #43766C;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+.slider.round:before {
+border-radius: 50%;}
+
+
+
+      /* CSS สำหรับปุ่ม */
+      .button {
+        background-color: #D2D180; /* สีพื้นหลังของปุ่ม */
+        border: none; /* ไม่มีเส้นขอบ */
+        color: black; /* สีข้อความ */
+        padding: 0.375rem 0.75rem; /* ขนาดของปุ่ม */
+        text-align: center; /* จัดข้อความตรงกลาง */
+        text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+        display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+        font-size: 16px; /* ขนาดข้อความ */
+        margin: 4px 2px; /* การระยะห่างระหว่างปุ่ม */
+        cursor: pointer; /* ปรับเป็นรูปแบบ Cursor เมื่อชี้ที่ปุ่ม */
+        border-radius: 8px; /* สัดส่วนมุมของปุ่ม */
+      }
+
+      /* CSS สำหรับการเม้าส์ Hover */
+      .button:hover {
+        background-color: #7F9F80; /* สีพื้นหลังของปุ่มเมื่อเม้าส์ Hover */
+      }
+
+    /* CSS สำหรับปุ่ม */
+    .planting-button {
+            background-color: #78A083; /* สีพื้นหลังของปุ่ม */
+            border: none; /* ไม่มีเส้นขอบ */
+            color: white; /* สีข้อความ */
+            padding: 0.375rem 0.75rem; /* ขนาดของปุ่ม */
+            text-align: center; /* จัดข้อความตรงกลาง */
+            text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+            display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+            font-size: 16px; /* ขนาดข้อความ */
+            margin: 4px 4px; /* การระยะห่างระหว่างปุ่ม */
+            cursor: pointer; /* ปรับเป็นรูปแบบ Cursor เมื่อชี้ที่ปุ่ม */
+            border-radius: 8px; /* สัดส่วนมุมของปุ่ม */
+          }
+
+          /* CSS สำหรับการเม้าส์ Hover */
+          .planting-button:hover {
+            background-color: #CCD3CA; /* สีพื้นหลังของปุ่มเมื่อเม้าส์ Hover */
+          }
+
+          
+
+          .dome-button {
+            background-color: #6196A6; /* สีพื้นหลังของปุ่ม */
+            border: none; /* ไม่มีเส้นขอบ */
+            color: white; /* สีข้อความ */
+            padding: 0.375rem 0.75rem; /* ขนาดของปุ่ม */
+            text-align: center; /* จัดข้อความตรงกลาง */
+            text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+            display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+            font-size: 16px; /* ขนาดข้อความ */
+            margin: 4px 4px; /* การระยะห่างระหว่างปุ่ม */
+            cursor: pointer; /* ปรับเป็นรูปแบบ Cursor เมื่อชี้ที่ปุ่ม */
+            border-radius: 8px; /* สัดส่วนมุมของปุ่ม */
+          }
+
+          /* CSS สำหรับการเม้าส์ Hover */
+          .dome-button:hover {
+            background-color: #9BB0C1; /* สีพื้นหลังของปุ่มเมื่อเม้าส์ Hover */
+          }
+
+
+        /* Style for Edit button */
+        .edit-btn {
+          background-color: #FFE382; /* สีพื้นหลังของปุ่ม */
+        border: none; /* ไม่มีเส้นขอบ */
+        color: black; /* สีข้อความ */
+        padding: 0.4rem 0.75rem; /* ขนาดของปุ่ม */
+        text-align: center; /* จัดข้อความตรงกลาง */
+        text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+        display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+        font-size: 16px; /* ขนาดข้อความ */
+        margin: 4px 2px; /* การระยะห่างระหว่างปุ่ม */
+        cursor: pointer; /* ปรับเป็นรูปแบบ Cursor เมื่อชี้ที่ปุ่ม */
+        border-radius: 8px; /* สัดส่วนมุมของปุ่ม */
+        }
+        .edit-btn:hover {
+        background-color: #F6F193; /* สีพื้นหลังของปุ่มเมื่อเม้าส์ Hover */
+      }
+
+        /* Style for Delete button */
+        .delete-btn {
+            background-color: #9B4444; /* Red */
+            border: none; /* ไม่มีเส้นขอบ */
+            color: white; /* สีข้อความ */
+            padding: 0.4rem 0.75rem; /* ขนาดของปุ่ม */
+            text-align: center; /* จัดข้อความตรงกลาง */
+            text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+            display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+            font-size: 16px; /* ขนาดข้อความ */
+            margin: 4px 2px; /* การระยะห่างระหว่างปุ่ม */
+            cursor: pointer; /* ปรับเป็นรูปแบบ Cursor เมื่อชี้ที่ปุ่ม */
+            border-radius: 8px; /* สัดส่วนมุมของปุ่ม */
+        
+        }
+        .delete-btn:hover {
+        background-color:#D37676; /* สีพื้นหลังของปุ่มเมื่อเม้าส์ Hover */
+          }
+          
+        .delete-btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 8px;
+          /*text-align: left;*/
+          border-bottom: 1px solid #000000;
+      }
+     
+      th {
+          background-color: #000000;
+      }
+
+/* Profile Section */
+.section.profile {
+  padding: 60px 0;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card img {
+  width: 150px;
+  height: 150px;
+}
+
+.profile-card h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.profile-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.card-body {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-radius: 10px 10px 0 0;
+  color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-pane.fade {
+  display: none;
+}
+
+.tab-pane.fade.show {
+  display: block;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.btn-lg-square {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Profile Section Styles */
+
+.section.profile {
+  padding: 50px 0; /* Adjust the padding as needed */
+}
+
+.section.profile .card {
+  margin-bottom: 30px;
+}
+
+.section.profile img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section.profile .profile-card h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.section.profile .profile-card h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.section.profile .social-links {
+  margin-top: 20px;
+}
+
+.section.profile .social-links a {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for medium-sized screens (tablets) */
+  .section.profile {
+      padding: 30px 0; /* Adjust the padding for smaller screens */
+  }
+  
+  .section.profile .profile-card img {
+      max-width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust styles for small-sized screens (phones) */
+  .section.profile {
+      padding: 20px 0; /* Adjust the padding for smaller screens */
+  }
+  
+  .section.profile .profile-card h2 {
+      font-size: 20px;
+  }
+  
+  .section.profile .profile-card h3 {
+      font-size: 16px;
+  }
+  
+  .section.profile .social-links a {
+      font-size: 16px;
+  }
+}
+
+.col-xl-6 .card {
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.dropdown-item:active {
+  background-color: #C6CF9B; /* สีเทาอ่อน */
+  color: #000000; /* สีดำ */
+}
+
+/* CSS for Custom Dropdown Toggle */
+.btn-group .dropdown-toggle-custom,
+.dropdown-toggle-custom {
+  position: relative;
+  display: inline-block;
+  background-color: #80a05d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-group .dropdown-toggle-custom::after,
+.dropdown-toggle-custom::after {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: .5s;
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+.btn-group .dropdown-toggle-custom[aria-expanded=true]::after,
+.dropdown-toggle-custom[aria-expanded=true]::after {
+  transform: rotate(-180deg);
+}
+
+.btn-group .dropdown-menu-custom,
+.dropdown-menu-custom {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.btn-group .dropdown-menu-custom li,
+.dropdown-menu-custom li {
+  padding: 0.5rem 1rem;
+}
+
+.btn-group .dropdown-menu-custom li:hover,
+.dropdown-menu-custom li:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-group:hover .dropdown-menu-custom,
+.dropdown-toggle-custom:hover .dropdown-menu-custom {
+  display: block;
+}
+
+.bg-box{
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* เพิ่มเงาดำ ๆ ของขนาด 20px */
+}
+
+.bg-light {
+background-color: #F3F6F9 !important;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+
+
+body {
+    font-family: 'Noto Sans Thai', sans-serif;
+    /* เปลี่ยนฟ้อนต์สำหรับ body */
+}
+
+/* เพิ่มรูปแบบการเขียนเพิ่มเติมตามความต้องการ */
+h1,
+h2,
+h3,
+p {
+    font-family: 'Noto Sans Thai', sans-serif;
+    /* เปลี่ยนฟ้อนต์สำหรับหัวข้อและย่อหน้า */
+}
+
+/* เพิ่มรูปแบบการเขียนเพิ่มเติมตามความต้องการ */
+.custom-class {
+    font-family: 'Noto Sans Thai', sans-serif;
+    /* เปลี่ยนฟ้อนต์สำหรับคลาสที่กำหนดเอง */
+}
+
+.bg-light {
+    background-color: #F3F6F9 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงา */
+}
+
